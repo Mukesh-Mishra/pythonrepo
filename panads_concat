@@ -1,0 +1,12 @@
+df1 = pd.DataFrame({ 
+    'id':[1,2,3,4,5],
+    'name':['a','b','c','d','e'],
+    'sub':['sub1','sub2','sub3','sub4','sub5']
+})
+df2 = pd.DataFrame({
+    'id':[1,2,3,4,5],
+    'name':['b','c','d','e','f'],
+    'sub':['sub3','sub4','sub5','sub6','sub7']
+})
+df3 = pd.concat([df1, df2], axis=0)   
+df4 = pd.merge(left=df1, right=df2, on='id')  
