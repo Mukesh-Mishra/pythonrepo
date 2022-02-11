@@ -1,0 +1,16 @@
+# Open
+# Apply the required operation
+# Close
+
+try:
+    f = open('data.txt', 'w', encoding='utf8')  # when working with files in text mode, it is highly recommended to specify the encoding type.
+    f.write('Dear Sir,\n')
+    f.write('Same has been done.\n')
+    f.write('Regards,\n')
+    f.write('Mukesh Mishra')
+    f = open('data.txt', 'r')
+    print(f.read())
+    f.close()
+    
+finally:
+    f.close() 
